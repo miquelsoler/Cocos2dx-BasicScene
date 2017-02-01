@@ -38,6 +38,10 @@ bool HelloWorld::init()
     _player->setPosition(Vec2(winSize.width * 0.1, winSize.height * 0.5));
     this->addChild(_player);
 
+    // Add enemies
+    srand((unsigned int)time(nullptr));
+    this->schedule(schedule_selector(HelloWorld::addEnemy), 1.5);
+
     return true;
 }
 
