@@ -34,7 +34,7 @@ bool HelloWorld::init()
     this->addChild(background);
 
     // Add Mario as a sprite
-    _player = Sprite::create("mario-sprite-960x480.png");
+    _player = Sprite::create("mario.png");
     _player->setPosition(Vec2(winSize.width * 0.1, winSize.height * 0.5));
     this->addChild(_player);
 
@@ -65,7 +65,7 @@ void HelloWorld::addEnemy(float dt)
 {
     // Crea l'sprite de l'enemic i posiciona'l
 
-    auto enemy = Sprite::create("enemy-sprite-960x480.png");
+    auto enemy = Sprite::create("enemy.png");
 
     auto enemyContentSize = enemy->getContentSize(); // Tamany de l'sprite enemic
     auto selfContentSize = this->getContentSize(); // Tamany de la finestra
